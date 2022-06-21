@@ -1,0 +1,61 @@
+// INCLUDE 
+
+
+
+// VARIABLE
+
+
+// MIXIN
+
+@mixin topnavLink {
+    text-align: center;
+}
+
+// BASE
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+// HEADER
+
+.topnav{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: black;
+    &__logo{
+        @include topnavLink;
+        color: white;
+        margin-left: 4%;
+        font-size: xxx-large;
+    }
+    &__link{
+        @include topnavLink;
+        flex: auto;
+        &--form{
+            color: white;
+            font-size:x-large;
+            padding: 15px;
+            &:hover{
+                color: red
+            }
+        }
+    }
+    &__register{
+        @include topnavLink;
+        margin-right: 4%;
+        &--form{
+            color: white;
+            font-size:x-large;
+            padding: 15px;
+        }
+    }
+}
+

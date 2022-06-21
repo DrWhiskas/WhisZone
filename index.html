@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhisZone.com</title>
 </head>
@@ -11,18 +12,25 @@
     <header>
         <!--NAVBAR-->
         <section class="topnav">
-            <a class="topnav__link" href="#">Accueil</a>
-            <a class="topnav__link" href="#">TDC</a>
-            <a class="topnav__link" href="#">autres</a>
-            <a class="topnav__link" href="#">Musiques</a>
-            <div class="topnav__register">
-                <a class="topnav__link " id="inscription" href="#">Inscription</a>
-                <a class="topnav__link" id="connexion" href="#">Connexion</a>
-            </div>
-            <!-- CONNECTION FORM -->
-            <!-- INSCRIPTION FORM -->
-
-            
+            <a href="index.html" class="topnav__logo">WhisZone</a>
+            <div class="topnav__link">
+                <a class="topnav__link--form" href="#">Accueil</a>
+                <a class="topnav__link--form" href="#">TDC</a>
+                <a class="topnav__link--form" href="#">Autres</a>
+                <a class="topnav__link--form" href="#">Musiques</a>
+                </div>
+                <div class="topnav__register">
+                    <a class="topnav__register--form" id="inscription" href="#">Inscription</a>
+                    <a class="topnav__register--form" id="connexion" href="#">Connexion</a>
+                </div>
+            <!--BURGER RESPONSIVE-->
+                <a class="topnav__burger" href="#">
+                    <span class="topnav__burger--icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
         </section>
     </header>
 </body>
