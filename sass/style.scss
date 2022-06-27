@@ -10,6 +10,10 @@
 @mixin topnavLink {
     text-align: center;
 }
+@mixin topnavAnimation{
+    transform: scale(1.1);
+    transition: all ease-in-out .5s;
+}
 
 // BASE
 a{
@@ -29,12 +33,16 @@ body{
     height: 100px;
     flex-wrap: wrap;
     align-items: center;
-    background-color: black;
+    background-color: rgb(48, 48, 48);
     &__logo{
         @include topnavLink;
         color: white;
         margin-left: 4%;
         font-size: xxx-large;
+        &:hover{
+            color: red;
+            @include topnavAnimation;
+        }
     }
     &__link{
         @include topnavLink;
@@ -44,7 +52,8 @@ body{
             font-size:x-large;
             padding: 15px;
             &:hover{
-                color: red
+                color: red;
+                @include topnavAnimation;
             }
         }
     }
@@ -55,7 +64,125 @@ body{
             color: white;
             font-size:x-large;
             padding: 15px;
+            &:hover{
+                color: red;
+            @include topnavAnimation; 
+            }
         }
     }
 }
 
+// MEDIA QUERY
+
+
+// MAIN
+
+// HEAD
+.head{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    height: 500px;
+    &__text{
+        position: absolute;
+        color: white;
+        left: 40%;
+        top: 40%;
+    }
+    &__wallpaper{
+        width: 100%;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.titre{
+        font-size: 80px;
+        margin: 0;
+}
+.description{
+    margin: 0;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+.footer{
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 300px;
+    &__content{
+    }
+    &__list{
+        padding: 30px;
+        text-align: center;
+    }
+    &__social{
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        & a{
+            color: white;
+            margin: 5px;
+            padding: 10px;
+            &:hover{
+                color: red;
+                @include topnavAnimation;
+            }
+        }
+
+    }
+}
+
+.montages{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    background-color: rgb(148, 148, 148);
+    &__titre{
+        width: 100%;
+        text-align: center;
+    }
+    &__content{
+        margin-top: 5%;
+        position: relative;
+        height: auto;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__card{
+            width: 300px;
+            height: auto;
+            margin: 0px auto;
+            background-color: white;
+            box-shadow: 0px 5px 20px #999;
+            overflow: hidden;
+            position: relative;
+            margin: 2%;
+            &__video iframe{
+                width: 100%;
+                height: 200px;
+            }
+            &__date{
+                text-align: center;
+                & h4{
+                    margin: 1%;
+                }
+            }
+            &__title{
+                text-align: center;
+                font-size: larger;
+            }
+        }
+    }
+}
